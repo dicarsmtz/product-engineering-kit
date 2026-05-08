@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resources To Notion Technical Design"
+  short_description: "Turn resources into Notion tech designs"
+  default_prompt: "Use $resources-to-notion-technical-design to analyze my resources and codebase, choose a production-grade approach, and publish a technical design doc in Notion."

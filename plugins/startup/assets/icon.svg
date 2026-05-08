@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Dicodeit Codex Setup">
+  <rect width="256" height="256" rx="48" fill="#083344"/>
+  <path d="M68 82h120v22H68zM68 117h76v22H68zM68 152h120v22H68z" fill="#ecfeff"/>
+  <circle cx="188" cy="128" r="18" fill="#22d3ee"/>
+  <path d="M188 58v38M188 160v38M118 128h52M206 128h32" stroke="#22d3ee" stroke-width="12" stroke-linecap="round"/>
+</svg>

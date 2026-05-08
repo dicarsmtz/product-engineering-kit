@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resources To Notion PRD"
+  short_description: "Turn resources into Notion PRDs"
+  default_prompt: "Use $resources-to-notion-prd to turn my idea and resources into a market-aware Notion PRD with competitor research, best-value MVP scope, and handoff notes for technical design or Jira."
