@@ -24,7 +24,7 @@ The GitHub repository should publish only the marketplace files needed for this 
 
 Custom Dicodeit/Roampler workflow skills:
 
-- `jira-from-design`
+- `resources-to-jira`
 - `resources-to-notion-prd`
 - `resources-to-notion-technical-design`
 

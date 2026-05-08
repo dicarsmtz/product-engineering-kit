@@ -4,7 +4,7 @@ Track the source of every bundled skill here so GitHub installs stay reviewable 
 
 | Skill | Source | Tracking Notes |
 | --- | --- | --- |
-| `jira-from-design` | Dicodeit/Roampler custom skill | Keep aligned with `resources-to-notion-prd` and `resources-to-notion-technical-design`. |
+| `resources-to-jira` | Dicodeit/Roampler custom skill | Keep aligned with `resources-to-notion-prd` and `resources-to-notion-technical-design`. |
 | `resources-to-notion-prd` | Dicodeit/Roampler custom skill | Product-only Notion PRD workflow. |
 | `resources-to-notion-technical-design` | Dicodeit/Roampler custom skill | Codebase-validated Notion technical design workflow. |
 | `playwright` | Downloaded or derived from the OpenAI skills repo; includes material derived from `microsoft/playwright-cli` | Preserve `LICENSE.txt` and `NOTICE.txt`; refresh deliberately from upstream. |

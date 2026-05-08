@@ -321,7 +321,7 @@ This skill can run independently from raw resources, or as the middle step in a 
 
 - Use `resources-to-notion-prd` first when the product problem, user value, MVP, or requirements are unclear.
 - Use this skill when implementation architecture, tradeoffs, risks, and production readiness need to be decided.
-- Use `jira-from-design` after this skill when the team is ready to turn the design into an epic, stories, dependencies, and acceptance criteria.
+- Use `resources-to-jira` after this skill when the team is ready to turn the design into an epic, stories, dependencies, and acceptance criteria.
 
 Do not require an upstream PRD or downstream Jira workflow. If the user provides enough context, produce the technical design directly. If an upstream PRD exists, treat it as product context and a product decision source, but validate implementation claims against the current codebase before treating them as technical reality.
 
