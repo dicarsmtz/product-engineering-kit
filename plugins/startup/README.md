@@ -36,7 +36,7 @@ Do not publish unrelated local workspace folders, Codex state, auth files, cache
 Install the private marketplace from GitHub:
 
 ```bash
-codex plugin marketplace add dicodeit/codex-startup --ref main
+codex plugin marketplace add dicarsmtz/codex-plugins --ref main
 ```
 
 Then enable the `startup` plugin in Codex. For private repositories, authenticate with GitHub in the environment Codex uses before running the command.
@@ -50,10 +50,17 @@ For GitHub MCP access, set `GITHUB_PAT_TOKEN` in the environment used by Codex. 
 Track the repository's `main` branch by installing with `--ref main`. Pull marketplace updates with:
 
 ```bash
-codex plugin marketplace upgrade startup
+codex plugin marketplace upgrade codex-plugins
 ```
 
-For stable rollouts, publish tags such as `v0.1.0` and install with `codex plugin marketplace add dicodeit/codex-startup --ref v0.1.0`.
+For stable rollouts, publish tags such as `v0.1.0` and install with `codex plugin marketplace add dicarsmtz/codex-plugins --ref v0.1.0`.
+
+Enable the plugin as:
+
+```toml
+[plugins."startup@codex-plugins"]
+enabled = true
+```
 
 ## Refresh This Repo
 

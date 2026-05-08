@@ -4,13 +4,17 @@
 model = "gpt-5.5"
 
 # Install the private startup marketplace from GitHub:
-# codex plugin marketplace add dicodeit/codex-startup --ref main
+# codex plugin marketplace add dicarsmtz/codex-plugins --ref main
 #
 # Track repository updates with:
-# codex plugin marketplace upgrade startup
+# codex plugin marketplace upgrade codex-plugins
 #
-# Codex writes the [marketplaces.startup] config block automatically.
+# Codex writes the [marketplaces.codex-plugins] config block automatically.
 # Do not configure this marketplace as a local clone unless you are testing edits.
+#
+# Enable the startup plugin with:
+# [plugins."startup@codex-plugins"]
+# enabled = true
 
 # Official plugin marketplace entries are managed by Codex runtime paths on each machine.
 # Keep the enabled plugin declarations, but do not copy machine-specific marketplace source paths.

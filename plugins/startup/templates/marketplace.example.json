@@ -1,7 +1,7 @@
 {
-  "name": "startup",
+  "name": "codex-plugins",
   "interface": {
-    "displayName": "Startup"
+    "displayName": "Codex Plugins"
   },
   "plugins": [
     {

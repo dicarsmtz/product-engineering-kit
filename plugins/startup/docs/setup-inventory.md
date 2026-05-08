@@ -7,13 +7,13 @@ Captured on 2026-05-08 from `/Users/dicodeit/.codex` and `/Users/dicodeit/astrea
 This bundle is intended to be installed from GitHub as a Codex marketplace:
 
 ```bash
-codex plugin marketplace add dicodeit/codex-startup --ref main
+codex plugin marketplace add dicarsmtz/codex-plugins --ref main
 ```
 
 Update tracking is handled by Codex marketplace upgrades:
 
 ```bash
-codex plugin marketplace upgrade startup
+codex plugin marketplace upgrade codex-plugins
 ```
 
 The active marketplace file is `.agents/plugins/marketplace.json` at the repository root. Its plugin entry points to `./plugins/startup`, resolved inside Codex's fetched marketplace checkout.
