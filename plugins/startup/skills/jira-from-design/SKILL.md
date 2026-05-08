@@ -1,5 +1,5 @@
 ---
-name: jira-from-design
+name: resources-to-jira
 description: Gather context from resources such as PRDs, technical design docs, architecture plans, Notion pages, URLs, local files, prompts, or existing Jira epics; validate claims against the actual current codebase; review risks and corrections; plan dependencies, blockers, parallel lanes, same-owner bundles, enterprise dependency choices, and Terraform/IaC work when infra changes are needed; then create or extend a Jira epic and functional technical stories with rich Markdown descriptions. Use when Codex is asked to turn resources to Jira, resources into Jira work, or a design doc, PRD, technical plan, integration plan, Notion page, or existing Jira into actionable Jira issues, especially for BlueFlame engineering tickets.
 ---
 
