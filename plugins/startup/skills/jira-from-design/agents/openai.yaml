@@ -1,4 +1,4 @@
 interface:
   display_name: "Resources To Jira"
   short_description: "Turn resources into Jira plans"
-  default_prompt: "Use $jira-from-design to validate these resources against the codebase, plan dependencies and parallel work, then create or extend Jira tickets."
+  default_prompt: "Use $resources-to-jira to validate these resources against the codebase, plan dependencies and parallel work, then create or extend Jira tickets."
