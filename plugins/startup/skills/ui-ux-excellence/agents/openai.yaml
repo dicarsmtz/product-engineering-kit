@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI/UX Excellence"
+  short_description: "Design and ship high-quality UI"
+  default_prompt: "Use $ui-ux-excellence to audit or implement this user-facing surface with token discipline, accessible states, concise copy, and browser verification."
