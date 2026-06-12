@@ -1,8 +1,8 @@
-# Startup Codex Plugin
+# Startup Plugin
 
-Private Codex plugin bundle for Dicodeit/Roampler startup workflows.
+Private Codex and Claude Code plugin bundle for Dicodeit/Roampler startup workflows.
 
-This repository is meant to be installed as a Codex marketplace directly from GitHub. It includes portable skills and sanitized MCP configuration, but intentionally excludes auth tokens, Codex state, logs, sessions, caches, and local history.
+This repository is meant to be installed as a Codex marketplace or Claude Code marketplace directly from GitHub. It includes portable skills and sanitized MCP configuration, but intentionally excludes auth tokens, agent state, logs, sessions, caches, and local history.
 
 ## Included
 
@@ -11,6 +11,7 @@ This repository is meant to be installed as a Codex marketplace directly from Gi
 - `.mcp.json` with the active remote MCP server definitions for Notion, GitHub, and Atlassian.
 - `templates/codex-config.template.toml` with the enabled official plugin and MCP wiring from the current Codex config.
 - `.agents/plugins/marketplace.json` and `templates/marketplace.example.json` for GitHub marketplace installation.
+- `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json` for Claude Code marketplace installation.
 - `docs/setup-inventory.md` with the captured setup inventory and portability notes.
 - `docs/skill-sources.md` with the source ledger for bundled skills.
 
@@ -21,13 +22,15 @@ This repository is meant to be installed as a Codex marketplace directly from Gi
 - OpenAI bundled/primary-runtime plugin cache contents
 - Any private access token values
 
-## Install From GitHub
+## Install In Codex
 
 The GitHub repository should publish this layout:
 
 ```text
 .agents/plugins/marketplace.json
+.claude-plugin/marketplace.json
 plugins/startup/.codex-plugin/plugin.json
+plugins/startup/.claude-plugin/plugin.json
 plugins/startup/...
 ```
 
@@ -44,6 +47,19 @@ Then enable the `startup` plugin in Codex. For private repositories, authenticat
 The marketplace file uses a relative `source.path` of `./plugins/startup`. That path is resolved inside Codex's fetched GitHub marketplace checkout; it is not a requirement to keep a local clone under `~/plugins`.
 
 For GitHub MCP access, set `GITHUB_PAT_TOKEN` in the environment used by Codex. Notion and Atlassian should authenticate through their normal Codex/MCP auth flows when prompted.
+
+## Install In Claude Code
+
+Install the same repository as a Claude Code marketplace:
+
+```bash
+claude plugin marketplace add dicarsmtz/codex-plugins
+claude plugin install startup@codex-plugins
+```
+
+Claude Code reads `.claude-plugin/marketplace.json` at the repository root and installs `plugins/startup` through the relative `source` path. The plugin-level Claude manifest exposes the existing `skills/` directory and `.mcp.json`.
+
+For private repository auto-updates, set `GITHUB_TOKEN` or `GH_TOKEN` in the environment used by Claude Code. For GitHub MCP access through the bundled remote MCP server, keep `GITHUB_PAT_TOKEN` available where Claude Code runs.
 
 ## Track Updates
 
@@ -72,7 +88,11 @@ Run validation after edits:
 
 ```bash
 python3 -m json.tool .agents/plugins/marketplace.json
+python3 -m json.tool .claude-plugin/marketplace.json
 python3 -m json.tool plugins/startup/.codex-plugin/plugin.json
+python3 -m json.tool plugins/startup/.claude-plugin/plugin.json
 python3 -m json.tool plugins/startup/.mcp.json
 python3 -m json.tool plugins/startup/templates/marketplace.example.json
+claude plugin validate .
+claude plugin validate plugins/startup
 ```

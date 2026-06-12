@@ -1,0 +1,37 @@
+{
+  "name": "codex-plugins",
+  "owner": {
+    "name": "Dicodeit"
+  },
+  "description": "Private Claude Code-compatible marketplace for Dicodeit startup workflow plugins.",
+  "plugins": [
+    {
+      "name": "startup",
+      "source": "./plugins/startup",
+      "displayName": "Startup",
+      "description": "Private Claude Code-compatible startup bundle for workflow skills, MCP server definitions, and setup notes.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Dicodeit",
+        "url": "https://github.com/dicodeit"
+      },
+      "homepage": "https://github.com/dicarsmtz/codex-plugins",
+      "repository": "https://github.com/dicarsmtz/codex-plugins",
+      "license": "UNLICENSED",
+      "keywords": [
+        "claude-code",
+        "codex",
+        "plugins",
+        "skills",
+        "mcp",
+        "startup"
+      ],
+      "category": "engineering",
+      "tags": [
+        "skills",
+        "mcp",
+        "startup"
+      ]
+    }
+  ]
+}

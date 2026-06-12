@@ -16,7 +16,16 @@ Update tracking is handled by Codex marketplace upgrades:
 codex plugin marketplace upgrade codex-plugins
 ```
 
-The active marketplace file is `.agents/plugins/marketplace.json` at the repository root. Its plugin entry points to `./plugins/startup`, resolved inside Codex's fetched marketplace checkout.
+The active Codex marketplace file is `.agents/plugins/marketplace.json` at the repository root. Its plugin entry points to `./plugins/startup`, resolved inside Codex's fetched marketplace checkout.
+
+The Claude Code marketplace file is `.claude-plugin/marketplace.json` at the repository root:
+
+```bash
+claude plugin marketplace add dicarsmtz/codex-plugins
+claude plugin install startup@codex-plugins
+```
+
+It also points to `./plugins/startup`. The plugin-level Claude manifest is `plugins/startup/.claude-plugin/plugin.json` and exposes the existing `skills/` directory plus `.mcp.json`.
 
 The GitHub repository should publish only the marketplace files needed for this bundle, not unrelated local Roampler workspace folders.
 

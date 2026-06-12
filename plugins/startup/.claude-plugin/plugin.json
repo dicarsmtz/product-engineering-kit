@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "startup",
+  "displayName": "Startup",
+  "version": "0.1.0",
+  "description": "Private Claude Code-compatible startup bundle for workflow skills, MCP server definitions, and setup notes.",
+  "author": {
+    "name": "Dicodeit",
+    "url": "https://github.com/dicodeit"
+  },
+  "homepage": "https://github.com/dicarsmtz/codex-plugins",
+  "repository": "https://github.com/dicarsmtz/codex-plugins",
+  "license": "UNLICENSED",
+  "keywords": [
+    "claude-code",
+    "codex",
+    "plugins",
+    "skills",
+    "mcp",
+    "startup"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
