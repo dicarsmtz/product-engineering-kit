@@ -1,0 +1,47 @@
+{
+  "name": "product-engineering",
+  "version": "0.1.0",
+  "description": "Private GitHub-installable Codex product engineering bundle for workflow skills, MCP server definitions, and setup notes.",
+  "author": {
+    "name": "Dicodeit",
+    "url": "https://github.com/dicarsmtz"
+  },
+  "homepage": "https://github.com/dicarsmtz/product-engineering-kit",
+  "repository": "https://github.com/dicarsmtz/product-engineering-kit",
+  "license": "UNLICENSED",
+  "keywords": [
+    "codex",
+    "plugins",
+    "skills",
+    "mcp",
+    "roampler",
+    "product-engineering",
+    "delivery"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Product Engineering",
+    "shortDescription": "Private product engineering skills and MCP bundle",
+    "longDescription": "Private Codex plugin that turns mixed resources and code context into PRDs, technical designs, Jira delivery plans, UI reviews, security reviews, and browser-verified implementation work.",
+    "developerName": "Dicodeit",
+    "category": "Engineering",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/dicarsmtz/product-engineering-kit",
+    "privacyPolicyURL": "https://github.com/dicarsmtz/product-engineering-kit",
+    "termsOfServiceURL": "https://github.com/dicarsmtz/product-engineering-kit",
+    "defaultPrompt": [
+      "Create a Notion PRD from these resources",
+      "Create a technical design from this PRD",
+      "Turn this design into Jira stories"
+    ],
+    "brandColor": "#155E75",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

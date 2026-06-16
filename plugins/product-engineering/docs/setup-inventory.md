@@ -7,31 +7,31 @@ Captured on 2026-05-08 from `/Users/dicodeit/.codex` and `/Users/dicodeit/astrea
 This bundle is intended to be installed from GitHub as a Codex marketplace:
 
 ```bash
-codex plugin marketplace add dicarsmtz/codex-plugins --ref main
+codex plugin marketplace add dicarsmtz/product-engineering-kit --ref main
 ```
 
 Update tracking is handled by Codex marketplace upgrades:
 
 ```bash
-codex plugin marketplace upgrade codex-plugins
+codex plugin marketplace upgrade product-engineering-kit
 ```
 
-The active Codex marketplace file is `.agents/plugins/marketplace.json` at the repository root. Its plugin entry points to `./plugins/startup`, resolved inside Codex's fetched marketplace checkout.
+The active Codex marketplace file is `.agents/plugins/marketplace.json` at the repository root. Its plugin entry points to `./plugins/product-engineering`, resolved inside Codex's fetched marketplace checkout.
 
 The Claude Code marketplace file is `.claude-plugin/marketplace.json` at the repository root:
 
 ```bash
-claude plugin marketplace add dicarsmtz/codex-plugins
-claude plugin install startup@codex-plugins
+claude plugin marketplace add dicarsmtz/product-engineering-kit
+claude plugin install product-engineering@product-engineering-kit
 ```
 
-It also points to `./plugins/startup`. The plugin-level Claude manifest is `plugins/startup/.claude-plugin/plugin.json` and exposes the existing `skills/` directory plus `.mcp.json`.
+It also points to `./plugins/product-engineering`. The plugin-level Claude manifest is `plugins/product-engineering/.claude-plugin/plugin.json` and exposes the existing `skills/` directory plus `.mcp.json`.
 
 The GitHub repository should publish only the marketplace files needed for this bundle, not unrelated local Roampler workspace folders.
 
 ## Bundled Skills
 
-Custom Dicodeit/Roampler workflow skills:
+Custom Dicodeit/Roampler product engineering workflow skills:
 
 - `resources-to-jira`
 - `resources-to-notion-prd`
@@ -95,4 +95,4 @@ Bundled in `.mcp.json`:
 - `models_cache.json`
 - `ambient-suggestions/`
 
-Keep this plugin private because the bundled skills encode internal workflow assumptions and repository-specific planning behavior.
+Keep this plugin private because the bundled skills encode internal product engineering workflow assumptions and repository-specific planning behavior.

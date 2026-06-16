@@ -1,22 +1,22 @@
 {
-  "name": "self-development",
+  "name": "product-engineering-kit",
   "owner": {
     "name": "Dicodeit"
   },
-  "description": "Private Claude Code-compatible marketplace for Dicodeit startup workflow plugins.",
+  "description": "Private Claude Code-compatible marketplace for Dicodeit product engineering workflow plugins.",
   "plugins": [
     {
-      "name": "startup",
-      "source": "./plugins/startup",
-      "displayName": "Startup",
-      "description": "Private Claude Code-compatible startup bundle for workflow skills, MCP server definitions, and setup notes.",
+      "name": "product-engineering",
+      "source": "./plugins/product-engineering",
+      "displayName": "Product Engineering",
+      "description": "Private Claude Code-compatible product engineering bundle for PRDs, technical designs, Jira delivery plans, UI reviews, security reviews, browser automation, screenshots, and MCP setup.",
       "version": "0.1.0",
       "author": {
         "name": "Dicodeit",
-        "url": "https://github.com/dicodeit"
+        "url": "https://github.com/dicarsmtz"
       },
-      "homepage": "https://github.com/dicarsmtz/codex-plugins",
-      "repository": "https://github.com/dicarsmtz/codex-plugins",
+      "homepage": "https://github.com/dicarsmtz/product-engineering-kit",
+      "repository": "https://github.com/dicarsmtz/product-engineering-kit",
       "license": "UNLICENSED",
       "keywords": [
         "claude-code",
@@ -24,13 +24,15 @@
         "plugins",
         "skills",
         "mcp",
-        "startup"
+        "product-engineering",
+        "delivery"
       ],
       "category": "engineering",
       "tags": [
         "skills",
         "mcp",
-        "startup"
+        "product-engineering",
+        "delivery"
       ]
     }
   ]

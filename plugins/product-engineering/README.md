@@ -1,6 +1,6 @@
-# Startup Plugin
+# Product Engineering Plugin
 
-Private Codex and Claude Code plugin bundle for Dicodeit/Roampler startup workflows.
+Private Codex and Claude Code plugin bundle for Dicodeit product engineering workflows.
 
 This repository is meant to be installed as a Codex marketplace or Claude Code marketplace directly from GitHub. It includes portable skills and sanitized MCP configuration, but intentionally excludes auth tokens, agent state, logs, sessions, caches, and local history.
 
@@ -14,6 +14,17 @@ This repository is meant to be installed as a Codex marketplace or Claude Code m
 - `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json` for Claude Code marketplace installation.
 - `docs/setup-inventory.md` with the captured setup inventory and portability notes.
 - `docs/skill-sources.md` with the source ledger for bundled skills.
+
+## Intended Workflow
+
+The bundle is organized around product engineering delivery:
+
+- Turn mixed product resources into Notion PRDs.
+- Turn PRDs, prompts, architecture notes, and code context into Notion technical designs.
+- Turn product and technical decisions into Jira implementation stories.
+- Review UI/UX quality, accessibility, and design-system consistency.
+- Perform security best-practice reviews and repository-grounded threat models.
+- Verify implementation behavior with Playwright, screenshots, and browser interaction.
 
 ## Not Included
 
@@ -29,9 +40,9 @@ The GitHub repository should publish this layout:
 ```text
 .agents/plugins/marketplace.json
 .claude-plugin/marketplace.json
-plugins/startup/.codex-plugin/plugin.json
-plugins/startup/.claude-plugin/plugin.json
-plugins/startup/...
+plugins/product-engineering/.codex-plugin/plugin.json
+plugins/product-engineering/.claude-plugin/plugin.json
+plugins/product-engineering/...
 ```
 
 Do not publish unrelated local workspace folders, Codex state, auth files, caches, logs, or sessions into the marketplace repository.
@@ -39,12 +50,12 @@ Do not publish unrelated local workspace folders, Codex state, auth files, cache
 Install the private marketplace from GitHub:
 
 ```bash
-codex plugin marketplace add dicarsmtz/codex-plugins --ref main
+codex plugin marketplace add dicarsmtz/product-engineering-kit --ref main
 ```
 
-Then enable the `startup` plugin in Codex. For private repositories, authenticate with GitHub in the environment Codex uses before running the command.
+Then enable the `product-engineering` plugin in Codex. For private repositories, authenticate with GitHub in the environment Codex uses before running the command.
 
-The marketplace file uses a relative `source.path` of `./plugins/startup`. That path is resolved inside Codex's fetched GitHub marketplace checkout; it is not a requirement to keep a local clone under `~/plugins`.
+The marketplace file uses a relative `source.path` of `./plugins/product-engineering`. That path is resolved inside Codex's fetched GitHub marketplace checkout; it is not a requirement to keep a local clone under `~/plugins`.
 
 For GitHub MCP access, set `GITHUB_PAT_TOKEN` in the environment used by Codex. Notion and Atlassian should authenticate through their normal Codex/MCP auth flows when prompted.
 
@@ -53,11 +64,11 @@ For GitHub MCP access, set `GITHUB_PAT_TOKEN` in the environment used by Codex. 
 Install the same repository as a Claude Code marketplace:
 
 ```bash
-claude plugin marketplace add dicarsmtz/codex-plugins
-claude plugin install startup@codex-plugins
+claude plugin marketplace add dicarsmtz/product-engineering-kit
+claude plugin install product-engineering@product-engineering-kit
 ```
 
-Claude Code reads `.claude-plugin/marketplace.json` at the repository root and installs `plugins/startup` through the relative `source` path. The plugin-level Claude manifest exposes the existing `skills/` directory and `.mcp.json`.
+Claude Code reads `.claude-plugin/marketplace.json` at the repository root and installs `plugins/product-engineering` through the relative `source` path. The plugin-level Claude manifest exposes the existing `skills/` directory and `.mcp.json`.
 
 For private repository auto-updates, set `GITHUB_TOKEN` or `GH_TOKEN` in the environment used by Claude Code. For GitHub MCP access through the bundled remote MCP server, keep `GITHUB_PAT_TOKEN` available where Claude Code runs.
 
@@ -66,15 +77,15 @@ For private repository auto-updates, set `GITHUB_TOKEN` or `GH_TOKEN` in the env
 Track the repository's `main` branch by installing with `--ref main`. Pull marketplace updates with:
 
 ```bash
-codex plugin marketplace upgrade codex-plugins
+codex plugin marketplace upgrade product-engineering-kit
 ```
 
-For stable rollouts, publish tags such as `v0.1.0` and install with `codex plugin marketplace add dicarsmtz/codex-plugins --ref v0.1.0`.
+For stable rollouts, publish tags such as `v0.1.0` and install with `codex plugin marketplace add dicarsmtz/product-engineering-kit --ref v0.1.0`.
 
 Enable the plugin as:
 
 ```toml
-[plugins."startup@codex-plugins"]
+[plugins."product-engineering@product-engineering-kit"]
 enabled = true
 ```
 
@@ -89,10 +100,10 @@ Run validation after edits:
 ```bash
 python3 -m json.tool .agents/plugins/marketplace.json
 python3 -m json.tool .claude-plugin/marketplace.json
-python3 -m json.tool plugins/startup/.codex-plugin/plugin.json
-python3 -m json.tool plugins/startup/.claude-plugin/plugin.json
-python3 -m json.tool plugins/startup/.mcp.json
-python3 -m json.tool plugins/startup/templates/marketplace.example.json
+python3 -m json.tool plugins/product-engineering/.codex-plugin/plugin.json
+python3 -m json.tool plugins/product-engineering/.claude-plugin/plugin.json
+python3 -m json.tool plugins/product-engineering/.mcp.json
+python3 -m json.tool plugins/product-engineering/templates/marketplace.example.json
 claude plugin validate .
-claude plugin validate plugins/startup
+claude plugin validate plugins/product-engineering
 ```

@@ -3,17 +3,17 @@
 
 model = "gpt-5.5"
 
-# Install the private startup marketplace from GitHub:
-# codex plugin marketplace add dicarsmtz/codex-plugins --ref main
+# Install the private product engineering marketplace from GitHub:
+# codex plugin marketplace add dicarsmtz/product-engineering-kit --ref main
 #
 # Track repository updates with:
-# codex plugin marketplace upgrade codex-plugins
+# codex plugin marketplace upgrade product-engineering-kit
 #
-# Codex writes the [marketplaces.codex-plugins] config block automatically.
+# Codex writes the [marketplaces.product-engineering-kit] config block automatically.
 # Do not configure this marketplace as a local clone unless you are testing edits.
 #
-# Enable the startup plugin with:
-# [plugins."startup@codex-plugins"]
+# Enable the product engineering plugin with:
+# [plugins."product-engineering@product-engineering-kit"]
 # enabled = true
 
 # Official plugin marketplace entries are managed by Codex runtime paths on each machine.

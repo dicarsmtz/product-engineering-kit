@@ -1,14 +1,14 @@
 {
-  "name": "codex-plugins",
+  "name": "product-engineering-kit",
   "interface": {
-    "displayName": "Codex Plugins"
+    "displayName": "Product Engineering Kit"
   },
   "plugins": [
     {
-      "name": "startup",
+      "name": "product-engineering",
       "source": {
         "source": "local",
-        "path": "./plugins/startup"
+        "path": "./plugins/product-engineering"
       },
       "policy": {
         "installation": "AVAILABLE",
