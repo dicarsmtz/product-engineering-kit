@@ -1,12 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
-  "name": "startup",
-  "displayName": "Startup",
+  "name": "self-development",
+  "displayName": "Self Development",
   "version": "0.1.0",
-  "description": "Private Claude Code-compatible startup bundle for workflow skills, MCP server definitions, and setup notes.",
+  "description": "Private Claude Code-compatible self development bundle for workflow skills, MCP server definitions, and setup notes.",
   "author": {
     "name": "Dicodeit",
-    "url": "https://github.com/dicodeit"
+    "url": "https://github.com/dicarsmtz"
   },
   "homepage": "https://github.com/dicarsmtz/codex-plugins",
   "repository": "https://github.com/dicarsmtz/codex-plugins",
