@@ -1,10 +1,12 @@
 # Jira Fields & Lean Templates (Developer-First)
 
-Use this reference when creating Jira issues. All epics and stories must remain concise, actionable, and free of enterprise fluff.
+Use this reference when creating Jira issues from a validated PRD or design plan. All epics and stories must remain concise, actionable, and free of enterprise fluff.
 
 ---
 
-## BlueFlame BFAI Common Fields
+## Common Fields
+
+Story custom fields commonly required in `BFAI`:
 
 | Field | Key | Type | Value |
 |---|---|---|---|
@@ -12,9 +14,30 @@ Use this reference when creating Jira issues. All epics and stories must remain 
 | Testing Needed? | `customfield_10095` | Multi-checkbox array | `[{"id": "10162"}]` for Yes |
 | Acceptance Criteria | `customfield_10132` | ADF document | Use `scripts/adf_acceptance.py` |
 
+Product Area option IDs commonly used:
+
+| Value | ID |
+|---|---|
+| Connections | `10231` |
+| Chat | `10180` |
+| Blueprints | `10174` |
+| API | `10592` |
+| Authentication | `10591` |
+| Agent V2 | `12056` |
+| Activity | `10491` |
+
+Testing Needed option IDs:
+
+| Value | ID |
+|---|---|
+| Yes | `10162` |
+| No | `10163` |
+
+*Note: Always query field metadata before relying on these IDs. Field availability can differ by issue type.*
+
 ---
 
-## Lean Epic Description Template
+## Epic Description Template
 
 ```markdown
 # Epic: [Feature Name]
