@@ -1,100 +1,43 @@
-# Notion PRD Template
+# Notion PRD Template (Lean MVP)
 
-Use this reference when creating the final Notion page. Adapt section names to the user's template if one is provided.
+## 1. Executive Summary & Core Thesis
+* **What we are building:** [1-2 sentences]
+* **Target User:** [1 sentence]
+* **Value Wedge:** [Why this beats doing it manually in 1 sentence]
+* **Confidence Level:** High | Medium | Low
 
-## Top Section
+---
 
-Start every Notion PRD with a short **Read First** section:
+## 2. High-Level User Flow
+`[User Input]` ➔ `[Prompt Engine]` ➔ `[Approval UI]` ➔ `[Cron Scheduler]` ➔ `[API Publishing]`
 
-- Recommendation: one paragraph on what to build.
-- MVP: one paragraph or bullets on the first release.
-- Why this beats alternatives: one sentence naming the strongest value wedge against competitors, substitutes, or doing nothing.
-- Confidence: High, Medium, or Low.
-- Top risks: 3 to 5 bullets.
-- Next decision: the most important unresolved choice.
+---
 
-## Metadata
+## 3. Core MVP Requirements
 
-Include:
+| ID | Feature | Target User | Requirement & Behavior | Acceptance Criteria | Priority |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `FR-001` | [Name] | [User] | [Short functional requirement] | - [ ] Criteria 1<br>- [ ] Criteria 2 | Must |
 
-- Feature or solution name.
-- Status.
-- Date.
-- Preparer.
-- Stakeholders or owners if known.
-- Target market/domain.
-- Customer segment.
-- Competitive set or similar-solution category.
-- Request mode: new feature, enhancement, discovery, synthesis, or product concept derived from technical/business resources.
-- Notion location.
-- Source links.
+---
 
-## Required Tables
+## 4. Developer Micro-Tickets
 
-### Feature Opportunity Map
+> **Ticket ID:** `TICK-001` - [Short Title]  
+> **Goal:** [1 sentence describing what to build]  
+> **User/Business Value:** [1 sentence explaining why this task matters]  
+> **Acceptance Criteria:**  
+> - [ ] Checkbox 1  
+> - [ ] Checkbox 2  
+> **Tech/API Hints:** [Relevant endpoints, DB models, or SDKs]
 
-| Opportunity | User/Persona | Pain Solved | Business Value | Competitive Gap Or Value Wedge | Evidence | Effort | Risk | Recommendation |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+---
 
-### Competitive Landscape
+## 5. Key Decisions & Deferred Scope (V2)
+* **Decisions Made:** [Top 2-3 technical/product choices]
+* **Deferred to V2:** [List cut features like complex analytics, A/B testing, multi-user roles]
 
-| Alternative | Type | Target Segment | Core Promise | Table-Stakes Features | Strengths | Gaps Or Limits | Pricing/Packaging Signal | Differentiation Opportunity | Evidence/Confidence |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+---
 
-### Requirements
-
-| ID | Priority | Phase | Persona | Requirement | Rationale | Acceptance Criteria | Source/Confidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-
-### Assumptions
-
-| Assumption | Confidence | Impact If Wrong | Validation Path | Owner |
-| --- | --- | --- | --- | --- |
-
-### Decisions
-
-| Decision | Rationale | Alternatives Considered | Confidence | Revisit Trigger |
-| --- | --- | --- | --- | --- |
-
-### Risks
-
-| Risk | Impact | Likelihood | Mitigation | Owner |
-| --- | --- | --- | --- | --- |
-
-### Open Questions
-
-| Question | Impact | Recommended Default | Owner | Deadline |
-| --- | --- | --- | --- | --- |
-
-### Source Ledger
-
-| Source | Type | Date | Key Claims | Confidence | Conflicts |
-| --- | --- | --- | --- | --- | --- |
-
-## Product Handoff Sections
-
-Include these sections near the end for downstream planning without specifying architecture or technical implementation:
-
-- Product workstreams by user outcome.
-- Product dependencies and sequencing.
-- Launch and rollout gates.
-- QA focus areas from user behavior and acceptance criteria.
-- Launch and support readiness.
-
-## Existing Page Updates
-
-When updating an existing Notion PRD:
-
-- Rewrite the page as one current source of truth.
-- Integrate improvements into existing sections.
-- Replace stale or conflicting content directly.
-- Do not append "improvement pass", "revision", "delta", "v2", or correction sections unless the user explicitly asks for a changelog.
-- Keep edit rationale in the final response, not in the canonical PRD.
-
-## Notion Formatting Guidance
-
-- Use headings for major sections.
-- Use tables for structured decisions, requirements, risks, assumptions, and sources.
-- Use callouts for top risks, recommended decisions, and blockers when supported.
-- Keep the first viewport scannable for stakeholders.
-- Avoid burying open questions in prose.
+## 6. Open Questions
+* [Maximum 3 critical questions blocking implementation]
